@@ -1,0 +1,76 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+} 
+
+/* all this is telling us if we nest sections together than its gonna treat all its parent 100 % width and height and its applies it to everything */
+
+
+/*calculator height and width needs to be same irrespective of screen size and its position needs to be absolute*/
+.calculator {
+    position: absolute;
+    top: 50%; /*this positions stuff in the middle*/
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+    width: 400px;
+    padding: 40px;
+    padding-top: 75px;
+    border-radius: 30px;
+    background-color: black;
+    /* border: 2px solid red; */
+}
+
+.calculator-screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color: white;
+    color: black;
+    text-align: right;
+    padding-right: 10px;
+    /* border: 2px solid green; */
+}
+
+.calculator-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 18px;
+    padding-bottom: 2px;
+    /* border: 2px solid yellow; */
+}
+button {
+    height: 60px;
+    background-color: rgb(206, 206, 206);
+    border: none;
+    border-radius: 30px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    margin: 7px;
+    padding: 5px;
+    flex: 1 0 18%; /*here 25% flex-basis doesn't work because of the additonal margin and stuff*/
+
+}
+button:hover{
+    background-color: gray;
+}
+.all-clear{
+    background-color: rgb(243, 130, 9); /*make it red and change color on hover*/
+    color: white;
+    font-size: 3rem;
+}
+.all-clear:hover{
+    background-color: red;
+    color: white;
+}
+
